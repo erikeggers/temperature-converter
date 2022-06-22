@@ -14,7 +14,7 @@ I used React-Switch for the dark/light mode toggle simply because of its customi
 
 The structure of the application is pretty simple. The theme file is contained within the `src` folder and the components used are in the `components` folder. `App.js` imports the components and the theme is set on the Styled-Components `ThemeProvider` component. This allows the other components to use the theme. 
 
-Using the app is easy. All you do is enter a temperature in on of the two input fields and it converts it to the other temperature scale automatically.
+Using the app is easy. All you do is enter a temperature in one of the two input fields and it converts it to the other temperature scale automatically.
 
 The large emoji that is rendered depends on the temperature entered. I thought this would bring a little fun to something that could be considered mundane.  
 
