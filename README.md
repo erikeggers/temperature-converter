@@ -1,6 +1,8 @@
 
 #  Temperature Converter
 
+## About
+
 Though this app could have been built using vanilla JavaScript, I used React because I believe that building scalable applications is a great approach. React is flexible and can be used on a variety of platforms. 
 
 For styling, I used Styled-Components because of its Theme Provider as I wanted to complete the dark/light mode option. The theme is automatically applied depending on the users set preference on their computer. If your computers theme is set to dark, the dark theme will be default when the application loads. 
