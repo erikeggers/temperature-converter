@@ -12,7 +12,7 @@ I also like keeping styles contained within the component that is using it. This
 
 I used React-Switch for the dark/light mode toggle simply because of its customizability.  
 
-The structure of the application is pretty simple. The theme file is contained within the `src` folder and the components used are in the `components` folder. `App.js` imports the components and the theme is set on the Styled-Components `ThemeProvider`. 
+The structure of the application is pretty simple. The theme file is contained within the `src` folder and the components used are in the `components` folder. `App.js` imports the components and the theme is set on the Styled-Components `ThemeProvider` component. This allows the other components to use the theme. 
 
 Using the app is easy. All you do is enter a temperature in on of the two input fields and it converts it to the other temperature scale automatically.
 
