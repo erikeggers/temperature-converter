@@ -10,13 +10,17 @@ For styling, I used Styled-Components because of its Theme Provider as I wanted 
 
 I also like keeping styles contained within the component that is using it. This also helps with scalability. I could have created the styles as a JavaScript object and then pass it to the components, but I believe in code being readable and easy for someone else to jump in. Since Styled-Components syntax looks a lot like CSS, it would be easier for someone else to jump in.
 
-I used React-Switch for the dark/light mode toggle simply because of its customizability. 
+I used React-Switch for the dark/light mode toggle simply because of its customizability.  
+
+The structure of the application is pretty simple. The theme file is contained within the `src` folder and the components used are in the `components` folder. `App.js` imports the components and the theme is set on the Styled-Components `ThemeProvider`. 
+
+Using the app is easy. All you do is enter a temperature in on of the two input fields and it converts it to the other temperature scale automatically.
 
 The large emoji that is rendered depends on the temperature entered. I thought this would bring a little fun to something that could be considered mundane.  
 
-There is also error handling for the temperature inputs. If something other than a number is entered, an error will be displayed.  
+There is also error handling for the temperature inputs. If something other than a number is entered, an error will be displayed. You can also clear the error message by clicking the reset button or by entering a new temperature.
 
-The structure of the application is pretty simple. The theme file is contained within the `src` folder and the components used are in the `components` folder. `App.js` imports the components and the theme is set on the Styled-Components `ThemeProvider`. 
+To toggle the dark/light mode, click the switch in the top right corner.
   
   
 
