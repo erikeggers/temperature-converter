@@ -1,25 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, createContext } from "react";
+import styled, { ThemeProvider } from "styled-components";
+import { light, dark } from "./themes";
+import { Header } from "./components/header";
+import { TempConverter } from "./components/tempConverter";
+import { Footer } from "./components/footer";
 
-function App() {
+// Theme map
+const themesMap = {
+  light,
+  dark,
+};
+
+// Create a context for the theme
+export const ThemeContext = createContext();
+
+const App = () => {
+
+  // See if the user has a dark theme set on their computer
+  const getUsersTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  // console.log(getCurrentTheme());
+  const [currentTheme, setCurrentTheme] = useState(getUsersTheme ? "dark" : "light");
+
+  const theme = { colors: themesMap[currentTheme] };
+
+  // Toggle theme
+  const toggleTheme = () => {
+    setCurrentTheme(currentTheme === "light" ? "dark" : "light");
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeContext.Provider value={{ currentTheme, toggleTheme }}>
+      <ThemeProvider theme={theme}>
+        <Wrapper>
+          <Header/>
+          <TempConverter />
+          <Footer/>
+        </Wrapper>
+      </ThemeProvider>
+    </ThemeContext.Provider>
   );
-}
+};
 
 export default App;
+
+// Styled Components
+const Wrapper = styled.div`
+  background-color: ${({ theme }) => theme.colors.background};
+`;
