@@ -57,13 +57,13 @@ export const TempConverter = () => {
   // Convert the temperature from celsius to fahrenheit
   let fahrenheit =
     temp.type === "celsius" && temp.value !== "" && temp.value !== "-"
-      ? ((temp.value * 9) / 5 + 32)
+      ? (temp.value * 9) / 5 + 32
       : temp.value;
 
   // Convert the temperature from fahrenheit to celsius
   let celsius =
     temp.type === "fahrenheit" && temp.value !== "" && temp.value !== "-"
-      ? (((temp.value - 32) * 5) / 9)
+      ? ((temp.value - 32) * 5) / 9
       : temp.value;
 
   return (
@@ -136,9 +136,12 @@ const StyledInput = styled.input(
     margin: 10px 0;
     background-color: ${theme.colors.box};
     color: ${theme.colors.text};
-    border: 1px solid ${theme.colors.accent};
+    border: 1px solid ${theme.colors.text};
     padding: 5px;
     border-radius: 5px;
+    :focus {
+      border: 1px solid ${theme.colors.accent};
+    }
     `
 );
 
