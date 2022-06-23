@@ -57,13 +57,13 @@ export const TempConverter = () => {
   // Convert the temperature from celsius to fahrenheit
   let fahrenheit =
     temp.type === "celsius" && temp.value !== "" && temp.value !== "-"
-      ? ((temp.value * 9) / 5 + 32).toFixed(4)
+      ? ((temp.value * 9) / 5 + 32)
       : temp.value;
 
   // Convert the temperature from fahrenheit to celsius
   let celsius =
     temp.type === "fahrenheit" && temp.value !== "" && temp.value !== "-"
-      ? (((temp.value - 32) * 5) / 9).toFixed(4)
+      ? (((temp.value - 32) * 5) / 9)
       : temp.value;
 
   return (
