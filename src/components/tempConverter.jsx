@@ -100,6 +100,7 @@ export const TempConverter = () => {
   );
 };
 
+// Styled Components
 const StyledContent = styled.main`
   min-height: calc(100vh - 170px);
 `;
@@ -118,7 +119,6 @@ const StyledContainer = styled.div(
     `
 );
 
-// Styled Components
 const StyledParagraph = styled.p`
   margin-bottom: 20px;
   font-size: 18px;
